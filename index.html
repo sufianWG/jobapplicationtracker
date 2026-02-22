@@ -38,211 +38,261 @@
             </div>
         </div>
         <hr class="text-[#E6E7E9] my-7.5">
-    </header>
-
-    <main class="w-[80%] mx-auto">
         <section class="toggler-section mb-4">
             <div class="available-jobs flex justify-between">
                 <h2 class="text-blue-950 text-2xl font-bold my-3">Available Jobs</h2>
-                <p class="text-gray-700">0 Jobs</p>
+                <p class="text-gray-700"><span id="available-jobs">0</span> Jobs</p>
             </div>
             <div class="all-toggler-btn flex gap-2">
-                <button class="px-10 py-2 bg-blue-600 text-white rounded-md">All</button>
-                <button class="px-3 py-2 bg-white text-gray-700 rounded-md">Interview</button>
-                <button class="px-3 py-2 bg-white text-gray-700 rounded-md">Rejected</button>
+                <button id="all-filter-btn" class="px-10 py-2 bg-blue-600 text-white rounded-md">All</button>
+                <button id="interview-filter-btn" class="px-3 py-2 bg-white text-gray-700 rounded-md">Interview</button>
+                <button id="rejected-filter-btn" class="px-3 py-2 bg-white text-gray-700 rounded-md">Rejected</button>
             </div>
         </section>
-        <section class="all-job-cards space-y-4">
+    </header>
+
+    <main class="w-[80%] mx-auto">
+        <section id="filtered-section">
+
+        </section>
+        <section id="all-job-cards" class="all-job-cards space-y-4">
             <div class="job-card flex justify-between bg-white rounded-xl p-6" data-id="1">
                 <div class="div-left space-y-5 w-[70%]">
                     <div class="company-and-position">
-                    <h4 class="text-blue-950 text-xl font-bold">CloudWave Technologies</h4>
-                    <p class="text-[#64748B] ">Senior Frontend Engineer</p>
-                </div>
-                <div class="type-and-salary">
-                    <p class="text-[#64748B]">Remote • Full-time • $120,000 – $150,000</p>
-                </div>
-                <div class="status">
-                    <button class="bg-[#EEF4FF] text-blue-950 px-3 py-2 rounded-md">NOT APPLIED</button>
-                </div>
-                <div class="job-desc">
-                    <p class="text-gray-900 ">Build scalable React-based dashboards used by enterprise clients to monitor real-time analytics. Collaborate with backend teams to optimize API performance and improve UI accessibility.</p>
-                </div>
-                <div class="action-btns flex gap-5">
-                    <button class="text-green-600 px-3 py-2 border-green-600 border rounded-md font-bold">INTERVIEW</button>
-                    <button class="text-red-600 px-3 py-2 border-red-600 border rounded-md font-bold">REJECTED</button>
-                </div>
+                        <h4 class="text-blue-950 text-xl font-bold">CloudWave Technologies</h4>
+                        <p class="text-[#64748B] ">Senior Frontend Engineer</p>
+                    </div>
+                    <div class="type-and-salary">
+                        <p class="text-[#64748B]">Remote • Full-time • $120,000 – $150,000</p>
+                    </div>
+                    <div class="status">
+                        <button class="bg-[#EEF4FF] text-blue-950 px-3 py-2 rounded-md">NOT APPLIED</button>
+                    </div>
+                    <div class="job-desc">
+                        <p class="text-gray-900 ">Build scalable React-based dashboards used by enterprise clients to
+                            monitor real-time analytics. Collaborate with backend teams to optimize API performance and
+                            improve UI accessibility.</p>
+                    </div>
+                    <div class="action-btns flex gap-5">
+                        <button
+                            class="text-green-600 px-3 py-2 border-green-600 border rounded-md font-bold">INTERVIEW</button>
+                        <button
+                            class="text-red-600 px-3 py-2 border-red-600 border rounded-md font-bold">REJECTED</button>
+                    </div>
                 </div>
                 <div class="div-right">
-                    <button class="bg-white border border-[#F1F2F4] p-2 w-8 h-8 rounded-full flex justify-center align-middle"><i class="fa-regular fa-trash-can"></i></button>
+                    <button
+                        class="bg-white border border-[#F1F2F4] p-2 w-8 h-8 rounded-full flex justify-center align-middle"><i
+                            class="fa-regular fa-trash-can"></i></button>
                 </div>
             </div>
             <div class="job-card flex justify-between bg-white rounded-xl p-6" data-id="2">
                 <div class="div-left space-y-5 w-[70%]">
                     <div class="company-and-position">
-                    <h4 class="text-blue-950 text-xl font-bold">FinEdge Solutions</h4>
-                    <p class="text-[#64748B] ">Backend Developer (Node.js)</p>
-                </div>
-                <div class="type-and-salary">
-                    <p class="text-[#64748B]">New York, USA • Full-time • $110,000 – $140,000</p>
-                </div>
-                <div class="status">
-                    <button class="bg-[#EEF4FF] text-blue-950 px-3 py-2 rounded-md">NOT APPLIED</button>
-                </div>
-                <div class="job-desc">
-                    <p class="text-gray-900 ">Develop secure RESTful APIs for financial transaction processing systems. Implement authentication, optimize database queries, and ensure high availability architecture.</p>
-                </div>
-                <div class="action-btns flex gap-5">
-                    <button class="text-green-600 px-3 py-2 border-green-600 border rounded-md font-bold">INTERVIEW</button>
-                    <button class="text-red-600 px-3 py-2 border-red-600 border rounded-md font-bold">REJECTED</button>
-                </div>
+                        <h4 class="text-blue-950 text-xl font-bold">FinEdge Solutions</h4>
+                        <p class="text-[#64748B] ">Backend Developer (Node.js)</p>
+                    </div>
+                    <div class="type-and-salary">
+                        <p class="text-[#64748B]">New York, USA • Full-time • $110,000 – $140,000</p>
+                    </div>
+                    <div class="status">
+                        <button class="bg-[#EEF4FF] text-blue-950 px-3 py-2 rounded-md">NOT APPLIED</button>
+                    </div>
+                    <div class="job-desc">
+                        <p class="text-gray-900 ">Develop secure RESTful APIs for financial transaction processing
+                            systems. Implement authentication, optimize database queries, and ensure high availability
+                            architecture.</p>
+                    </div>
+                    <div class="action-btns flex gap-5">
+                        <button
+                            class="text-green-600 px-3 py-2 border-green-600 border rounded-md font-bold">INTERVIEW</button>
+                        <button
+                            class="text-red-600 px-3 py-2 border-red-600 border rounded-md font-bold">REJECTED</button>
+                    </div>
                 </div>
                 <div class="div-right">
-                    <button class="bg-white border border-[#F1F2F4] p-2 w-8 h-8 rounded-full flex justify-center align-middle"><i class="fa-regular fa-trash-can"></i></button>
+                    <button
+                        class="bg-white border border-[#F1F2F4] p-2 w-8 h-8 rounded-full flex justify-center align-middle"><i
+                            class="fa-regular fa-trash-can"></i></button>
                 </div>
             </div>
             <div class="job-card flex justify-between bg-white rounded-xl p-6" data-id="3">
                 <div class="div-left space-y-5 w-[70%]">
                     <div class="company-and-position">
-                    <h4 class="text-blue-950 text-xl font-bold">HealthBridge Systems</h4>
-                    <p class="text-[#64748B] ">Full Stack Developer</p>
-                </div>
-                <div class="type-and-salary">
-                    <p class="text-[#64748B]">Toronto, Canada • Hybrid • CAD 95,000 – 115,000</p>
-                </div>
-                <div class="status">
-                    <button class="bg-[#EEF4FF] text-blue-950 px-3 py-2 rounded-md">NOT APPLIED</button>
-                </div>
-                <div class="job-desc">
-                    <p class="text-gray-900 ">Work on telemedicine platforms serving hospitals and clinics. Develop patient dashboards, integrate third-party health APIs, and maintain secure medical data compliance.</p>
-                </div>
-                <div class="action-btns flex gap-5">
-                    <button class="text-green-600 px-3 py-2 border-green-600 border rounded-md font-bold">INTERVIEW</button>
-                    <button class="text-red-600 px-3 py-2 border-red-600 border rounded-md font-bold">REJECTED</button>
-                </div>
+                        <h4 class="text-blue-950 text-xl font-bold">HealthBridge Systems</h4>
+                        <p class="text-[#64748B] ">Full Stack Developer</p>
+                    </div>
+                    <div class="type-and-salary">
+                        <p class="text-[#64748B]">Toronto, Canada • Hybrid • CAD 95,000 – 115,000</p>
+                    </div>
+                    <div class="status">
+                        <button class="bg-[#EEF4FF] text-blue-950 px-3 py-2 rounded-md">NOT APPLIED</button>
+                    </div>
+                    <div class="job-desc">
+                        <p class="text-gray-900 ">Work on telemedicine platforms serving hospitals and clinics. Develop
+                            patient dashboards, integrate third-party health APIs, and maintain secure medical data
+                            compliance.</p>
+                    </div>
+                    <div class="action-btns flex gap-5">
+                        <button
+                            class="text-green-600 px-3 py-2 border-green-600 border rounded-md font-bold">INTERVIEW</button>
+                        <button
+                            class="text-red-600 px-3 py-2 border-red-600 border rounded-md font-bold">REJECTED</button>
+                    </div>
                 </div>
                 <div class="div-right">
-                    <button class="bg-white border border-[#F1F2F4] p-2 w-8 h-8 rounded-full flex justify-center align-middle"><i class="fa-regular fa-trash-can"></i></button>
+                    <button
+                        class="bg-white border border-[#F1F2F4] p-2 w-8 h-8 rounded-full flex justify-center align-middle"><i
+                            class="fa-regular fa-trash-can"></i></button>
                 </div>
             </div>
             <div class="job-card flex justify-between bg-white rounded-xl p-6" data-id="4">
                 <div class="div-left space-y-5 w-[70%]">
                     <div class="company-and-position">
-                    <h4 class="text-blue-950 text-xl font-bold">DataNest AI</h4>
-                    <p class="text-[#64748B] ">Machine Learning Engineer</p>
-                </div>
-                <div class="type-and-salary">
-                    <p class="text-[#64748B]">Remote • Contract • $70/hr – $90/hr</p>
-                </div>
-                <div class="status">
-                    <button class="bg-[#EEF4FF] text-blue-950 px-3 py-2 rounded-md">NOT APPLIED</button>
-                </div>
-                <div class="job-desc">
-                    <p class="text-gray-900 ">Design and train NLP models for automated document classification. Improve model accuracy and deploy ML pipelines using cloud-based infrastructure.</p>
-                </div>
-                <div class="action-btns flex gap-5">
-                    <button class="text-green-600 px-3 py-2 border-green-600 border rounded-md font-bold">INTERVIEW</button>
-                    <button class="text-red-600 px-3 py-2 border-red-600 border rounded-md font-bold">REJECTED</button>
-                </div>
+                        <h4 class="text-blue-950 text-xl font-bold">DataNest AI</h4>
+                        <p class="text-[#64748B] ">Machine Learning Engineer</p>
+                    </div>
+                    <div class="type-and-salary">
+                        <p class="text-[#64748B]">Remote • Contract • $70/hr – $90/hr</p>
+                    </div>
+                    <div class="status">
+                        <button class="bg-[#EEF4FF] text-blue-950 px-3 py-2 rounded-md">NOT APPLIED</button>
+                    </div>
+                    <div class="job-desc">
+                        <p class="text-gray-900 ">Design and train NLP models for automated document classification.
+                            Improve model accuracy and deploy ML pipelines using cloud-based infrastructure.</p>
+                    </div>
+                    <div class="action-btns flex gap-5">
+                        <button
+                            class="text-green-600 px-3 py-2 border-green-600 border rounded-md font-bold">INTERVIEW</button>
+                        <button
+                            class="text-red-600 px-3 py-2 border-red-600 border rounded-md font-bold">REJECTED</button>
+                    </div>
                 </div>
                 <div class="div-right">
-                    <button class="bg-white border border-[#F1F2F4] p-2 w-8 h-8 rounded-full flex justify-center align-middle"><i class="fa-regular fa-trash-can"></i></button>
+                    <button
+                        class="bg-white border border-[#F1F2F4] p-2 w-8 h-8 rounded-full flex justify-center align-middle"><i
+                            class="fa-regular fa-trash-can"></i></button>
                 </div>
             </div>
             <div class="job-card flex justify-between bg-white rounded-xl p-6" data-id="5">
                 <div class="div-left space-y-5 w-[70%]">
                     <div class="company-and-position">
-                    <h4 class="text-blue-950 text-xl font-bold">BrightCommerce Ltd</h4>
-                    <p class="text-[#64748B] ">React Native Developer</p>
-                </div>
-                <div class="type-and-salary">
-                    <p class="text-[#64748B]">London, UK • Full-time • £75,000 – £90,000</p>
-                </div>
-                <div class="status">
-                    <button class="bg-[#EEF4FF] text-blue-950 px-3 py-2 rounded-md">NOT APPLIED</button>
-                </div>
-                <div class="job-desc">
-                    <p class="text-gray-900 ">Develop cross-platform mobile commerce applications with React Native. Implement payment gateway integrations and optimize app performance for iOS and Android devices.</p>
-                </div>
-                <div class="action-btns flex gap-5">
-                    <button class="text-green-600 px-3 py-2 border-green-600 border rounded-md font-bold">INTERVIEW</button>
-                    <button class="text-red-600 px-3 py-2 border-red-600 border rounded-md font-bold">REJECTED</button>
-                </div>
+                        <h4 class="text-blue-950 text-xl font-bold">BrightCommerce Ltd</h4>
+                        <p class="text-[#64748B] ">React Native Developer</p>
+                    </div>
+                    <div class="type-and-salary">
+                        <p class="text-[#64748B]">London, UK • Full-time • £75,000 – £90,000</p>
+                    </div>
+                    <div class="status">
+                        <button class="bg-[#EEF4FF] text-blue-950 px-3 py-2 rounded-md">NOT APPLIED</button>
+                    </div>
+                    <div class="job-desc">
+                        <p class="text-gray-900 ">Develop cross-platform mobile commerce applications with React Native.
+                            Implement payment gateway integrations and optimize app performance for iOS and Android
+                            devices.</p>
+                    </div>
+                    <div class="action-btns flex gap-5">
+                        <button
+                            class="text-green-600 px-3 py-2 border-green-600 border rounded-md font-bold">INTERVIEW</button>
+                        <button
+                            class="text-red-600 px-3 py-2 border-red-600 border rounded-md font-bold">REJECTED</button>
+                    </div>
                 </div>
                 <div class="div-right">
-                    <button class="bg-white border border-[#F1F2F4] p-2 w-8 h-8 rounded-full flex justify-center align-middle"><i class="fa-regular fa-trash-can"></i></button>
+                    <button
+                        class="bg-white border border-[#F1F2F4] p-2 w-8 h-8 rounded-full flex justify-center align-middle"><i
+                            class="fa-regular fa-trash-can"></i></button>
                 </div>
             </div>
             <div class="job-card flex justify-between bg-white rounded-xl p-6" data-id="6">
                 <div class="div-left space-y-5 w-[70%]">
                     <div class="company-and-position">
-                    <h4 class="text-blue-950 text-xl font-bold">SecureNet Cybersecurity</h4>
-                    <p class="text-[#64748B] ">DevOps Engineer</p>
-                </div>
-                <div class="type-and-salary">
-                    <p class="text-[#64748B]">Berlin, Germany • Full-time • €85,000 – €105,000</p>
-                </div>
-                <div class="status">
-                    <button class="bg-[#EEF4FF] text-blue-950 px-3 py-2 rounded-md">NOT APPLIED</button>
-                </div>
-                <div class="job-desc">
-                    <p class="text-gray-900 ">Manage CI/CD pipelines and automate infrastructure provisioning using Docker and Kubernetes. Monitor system security and implement scalable cloud deployment strategies.</p>
-                </div>
-                <div class="action-btns flex gap-5">
-                    <button class="text-green-600 px-3 py-2 border-green-600 border rounded-md font-bold">INTERVIEW</button>
-                    <button class="text-red-600 px-3 py-2 border-red-600 border rounded-md font-bold">REJECTED</button>
-                </div>
+                        <h4 class="text-blue-950 text-xl font-bold">SecureNet Cybersecurity</h4>
+                        <p class="text-[#64748B] ">DevOps Engineer</p>
+                    </div>
+                    <div class="type-and-salary">
+                        <p class="text-[#64748B]">Berlin, Germany • Full-time • €85,000 – €105,000</p>
+                    </div>
+                    <div class="status">
+                        <button class="bg-[#EEF4FF] text-blue-950 px-3 py-2 rounded-md">NOT APPLIED</button>
+                    </div>
+                    <div class="job-desc">
+                        <p class="text-gray-900 ">Manage CI/CD pipelines and automate infrastructure provisioning using
+                            Docker and Kubernetes. Monitor system security and implement scalable cloud deployment
+                            strategies.</p>
+                    </div>
+                    <div class="action-btns flex gap-5">
+                        <button
+                            class="text-green-600 px-3 py-2 border-green-600 border rounded-md font-bold">INTERVIEW</button>
+                        <button
+                            class="text-red-600 px-3 py-2 border-red-600 border rounded-md font-bold">REJECTED</button>
+                    </div>
                 </div>
                 <div class="div-right">
-                    <button class="bg-white border border-[#F1F2F4] p-2 w-8 h-8 rounded-full flex justify-center align-middle"><i class="fa-regular fa-trash-can"></i></button>
+                    <button
+                        class="bg-white border border-[#F1F2F4] p-2 w-8 h-8 rounded-full flex justify-center align-middle"><i
+                            class="fa-regular fa-trash-can"></i></button>
                 </div>
             </div>
             <div class="job-card flex justify-between bg-white rounded-xl p-6" data-id="7">
                 <div class="div-left space-y-5 w-[70%]">
                     <div class="company-and-position">
-                    <h4 class="text-blue-950 text-xl font-bold">EduSpark Technologies</h4>
-                    <p class="text-[#64748B] ">UI/UX Designer</p>
-                </div>
-                <div class="type-and-salary">
-                    <p class="text-[#64748B]">Remote • Part-time • $45/hr – $60/hr</p>
-                </div>
-                <div class="status">
-                    <button class="bg-[#EEF4FF] text-blue-950 px-3 py-2 rounded-md">NOT APPLIED</button>
-                </div>
-                <div class="job-desc">
-                    <p class="text-gray-900 ">Design intuitive learning management system interfaces for students and instructors. Conduct usability testing and improve user journey flows based on research insights.</p>
-                </div>
-                <div class="action-btns flex gap-5">
-                    <button class="text-green-600 px-3 py-2 border-green-600 border rounded-md font-bold">INTERVIEW</button>
-                    <button class="text-red-600 px-3 py-2 border-red-600 border rounded-md font-bold">REJECTED</button>
-                </div>
+                        <h4 class="text-blue-950 text-xl font-bold">EduSpark Technologies</h4>
+                        <p class="text-[#64748B] ">UI/UX Designer</p>
+                    </div>
+                    <div class="type-and-salary">
+                        <p class="text-[#64748B]">Remote • Part-time • $45/hr – $60/hr</p>
+                    </div>
+                    <div class="status">
+                        <button class="bg-[#EEF4FF] text-blue-950 px-3 py-2 rounded-md">NOT APPLIED</button>
+                    </div>
+                    <div class="job-desc">
+                        <p class="text-gray-900 ">Design intuitive learning management system interfaces for students
+                            and instructors. Conduct usability testing and improve user journey flows based on research
+                            insights.</p>
+                    </div>
+                    <div class="action-btns flex gap-5">
+                        <button
+                            class="text-green-600 px-3 py-2 border-green-600 border rounded-md font-bold">INTERVIEW</button>
+                        <button
+                            class="text-red-600 px-3 py-2 border-red-600 border rounded-md font-bold">REJECTED</button>
+                    </div>
                 </div>
                 <div class="div-right">
-                    <button class="bg-white border border-[#F1F2F4] p-2 w-8 h-8 rounded-full flex justify-center align-middle"><i class="fa-regular fa-trash-can"></i></button>
+                    <button
+                        class="bg-white border border-[#F1F2F4] p-2 w-8 h-8 rounded-full flex justify-center align-middle"><i
+                            class="fa-regular fa-trash-can"></i></button>
                 </div>
             </div>
             <div class="job-card flex justify-between bg-white rounded-xl p-6" data-id="8">
                 <div class="div-left space-y-5 w-[70%]">
                     <div class="company-and-position">
-                    <h4 class="text-blue-950 text-xl font-bold">GreenGrid Energy</h4>
-                    <p class="text-[#64748B] ">Software Engineer (Python)</p>
-                </div>
-                <div class="type-and-salary">
-                    <p class="text-[#64748B]">Austin, Texas • Full-time • $105,000 – $130,000</p>
-                </div>
-                <div class="status">
-                    <button class="bg-[#EEF4FF] text-blue-950 px-3 py-2 rounded-md">NOT APPLIED</button>
-                </div>
-                <div class="job-desc">
-                    <p class="text-gray-900 ">Develop energy consumption optimization tools using Python and data analytics. Build predictive models to improve smart grid efficiency and sustainability tracking.</p>
-                </div>
-                <div class="action-btns flex gap-5">
-                    <button class="text-green-600 px-3 py-2 border-green-600 border rounded-md font-bold">INTERVIEW</button>
-                    <button class="text-red-600 px-3 py-2 border-red-600 border rounded-md font-bold">REJECTED</button>
-                </div>
+                        <h4 class="text-blue-950 text-xl font-bold">GreenGrid Energy</h4>
+                        <p class="text-[#64748B] ">Software Engineer (Python)</p>
+                    </div>
+                    <div class="type-and-salary">
+                        <p class="text-[#64748B]">Austin, Texas • Full-time • $105,000 – $130,000</p>
+                    </div>
+                    <div class="status">
+                        <button class="bg-[#EEF4FF] text-blue-950 px-3 py-2 rounded-md">NOT APPLIED</button>
+                    </div>
+                    <div class="job-desc">
+                        <p class="text-gray-900 ">Develop energy consumption optimization tools using Python and data
+                            analytics. Build predictive models to improve smart grid efficiency and sustainability
+                            tracking.</p>
+                    </div>
+                    <div class="action-btns flex gap-5">
+                        <button
+                            class="text-green-600 px-3 py-2 border-green-600 border rounded-md font-bold">INTERVIEW</button>
+                        <button
+                            class="text-red-600 px-3 py-2 border-red-600 border rounded-md font-bold">REJECTED</button>
+                    </div>
                 </div>
                 <div class="div-right">
-                    <button class="bg-white border border-[#F1F2F4] p-2 w-8 h-8 rounded-full flex justify-center align-middle"><i class="fa-regular fa-trash-can"></i></button>
+                    <button
+                        class="bg-white border border-[#F1F2F4] p-2 w-8 h-8 rounded-full flex justify-center align-middle"><i
+                            class="fa-regular fa-trash-can"></i></button>
                 </div>
             </div>
         </section>
@@ -257,6 +307,7 @@
         </section>
 
     </main>
+    <script src="scripts/scripts.js"></script>
 </body>
 
 </html>
