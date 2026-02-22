@@ -44,9 +44,9 @@
                 <p class="text-gray-700"><span id="available-jobs">0</span> Jobs</p>
             </div>
             <div class="all-toggler-btn flex gap-2">
-                <button id="all-filter-btn" class="px-10 py-2 bg-blue-600 text-white rounded-md">All</button>
-                <button id="interview-filter-btn" class="px-3 py-2 bg-white text-gray-700 rounded-md">Interview</button>
-                <button id="rejected-filter-btn" class="px-3 py-2 bg-white text-gray-700 rounded-md">Rejected</button>
+                <button onclick="toggler('all-filter-btn')" id="all-filter-btn" class="px-10 py-2 bg-blue-600 text-white rounded-md">All</button>
+                <button onclick="toggler('interview-filter-btn')" id="interview-filter-btn" class="px-3 py-2 bg-white text-gray-700 rounded-md">Interview</button>
+                <button onclick="toggler('rejected-filter-btn')" id="rejected-filter-btn" class="px-3 py-2 bg-white text-gray-700 rounded-md">Rejected</button>
             </div>
         </section>
     </header>
@@ -296,7 +296,7 @@
                 </div>
             </div>
         </section>
-        <section class="no-job-available text-center hidden">
+        <section id="no-job-available" class="no-job-available text-center hidden">
             <div class="py-27.5 px-6 flex flex-col justify-center align-middle bg-white rounded-md">
                 <div class="job-icon w-[70px] mx-auto">
                     <img src="assets/jobs.png" alt="">
