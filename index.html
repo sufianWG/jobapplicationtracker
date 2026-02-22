@@ -41,9 +41,12 @@
     </header>
 
     <main class="w-[80%] mx-auto">
-        <section class="filter-section mb-4">
-            <h2 class="text-blue-950 text-2xl font-bold my-3">Available Jobs</h2>
-            <div class="all-filter-btn flex gap-2">
+        <section class="toggler-section mb-4">
+            <div class="available-jobs flex justify-between">
+                <h2 class="text-blue-950 text-2xl font-bold my-3">Available Jobs</h2>
+                <p class="text-gray-700">0 Jobs</p>
+            </div>
+            <div class="all-toggler-btn flex gap-2">
                 <button class="px-10 py-2 bg-blue-600 text-white rounded-md">All</button>
                 <button class="px-3 py-2 bg-white text-gray-700 rounded-md">Interview</button>
                 <button class="px-3 py-2 bg-white text-gray-700 rounded-md">Rejected</button>
@@ -243,6 +246,16 @@
                 </div>
             </div>
         </section>
+        <section class="no-job-available text-center hidden">
+            <div class="py-27.5 px-6 flex flex-col justify-center align-middle bg-white rounded-md">
+                <div class="job-icon w-[70px] mx-auto">
+                    <img src="assets/jobs.png" alt="">
+                </div>
+                <h2 class="text-blue-950 text-2xl font-bold">No jobs available</h2>
+                <p class="text-gray-700">Check back soon for new job opportunities</p>
+            </div>
+        </section>
+
     </main>
 </body>
 
