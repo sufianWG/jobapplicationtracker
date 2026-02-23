@@ -231,15 +231,20 @@ mainContainer.addEventListener("click", function (event) {
         // console.log(jobCard)
         const targetJobId= Number(jobCard.getAttribute("data-id"));
         // console.log(jobId);
+        if(currentActiveBtn == "interview-filter-btn"){
+            
+        }
 
         interViewList = interViewList.filter(item => item.jobId !== targetJobId);
         calculateCount()
+
         rejectedList = rejectedList.filter(item => item.jobId !== targetJobId);
         calculateCount()
+        jobCard.classList.add("hidden");
         
         
         // console.log(totalJobList[2]);
-        console.log(currentActiveBtn);
+        // console.log(currentActiveBtn);
         if(currentActiveBtn == "all-filter-btn"){
             // totalJobList = totalJobList.filter(item => item !== targetJobId);
             // console.log(targetJobId);
