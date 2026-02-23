@@ -5,7 +5,7 @@ Answer: First I create an empty div into the HTML. after that, I will get the em
 ### 3. What is Event Bubbling? And how does it work?
 Answer: The Event Bubbling: When an even happen on a child element, it first runs on the elment, then it bubbles-up to its parent, then grandparent, and continues until document. 
 
-it works like : child → parent → grandparent → document
+it works like : child >> parent >> grandparent >> document
 ### 4. What is Event Delegation in JavaScript? Why is it useful?
 Answer: when need to add multiple Event Listner to the child elements, insteading of adding multiple event listner to the child, can be add event listner to the parent element and can use event bubling to handle events. It's useful because can use one Event Listner instead of many, works with dynamic elements and less repetitive code. 
 ### 5. What is the difference between preventDefault() and stopPropagation() methods?
