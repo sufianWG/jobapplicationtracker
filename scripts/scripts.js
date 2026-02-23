@@ -131,16 +131,19 @@ mainContainer.addEventListener("click", function (event) {
         // console.log("Main Container Running");
         const jobId = Number(event.target.parentNode.parentNode.parentNode.getAttribute("data-id"));
         // console.log(jobId);
+        const parentDivInterview = event.target.parentNode.parentNode.parentNode;
         const companyName = event.target.parentNode.parentNode.querySelector('.company-name').innerText;
         const positionName = event.target.parentNode.parentNode.querySelector('.position-name').innerText;
         const jobTypeAndSalary = event.target.parentNode.parentNode.querySelector('.type-salary').innerText;
-        let jobStatusElement = event.target.parentNode.parentNode.querySelector('.application-status')
-        jobStatusElement.innerText = "INTERVIEW"
-        if(jobStatusElement.innerText = "INTERVIEW"){
-            jobStatusElement.classList.remove("bg-[#EEF4FF]", "text-blue-950");
-            jobStatusElement.classList.add("text-green-600", "border-green-600", "border", "font-bold");
+        let jobStatusElementInterview = event.target.parentNode.parentNode.querySelector('.application-status')
+        jobStatusElementInterview.innerText = "INTERVIEW"
+        if(jobStatusElementInterview.innerText = "INTERVIEW"){
+            jobStatusElementInterview.classList.remove("bg-[#EEF4FF]", "text-blue-950");
+            jobStatusElementInterview.classList.remove("text-red-600", "border-red-600", "border", "font-bold");
+            parentDivInterview.classList.remove("border-l-5", "border-red-600");
+            jobStatusElementInterview.classList.add("text-green-600", "border-green-600", "border", "font-bold");
+            parentDivInterview.classList.add("border-l-5", "border-green-600");
         }
-        
         const jobDescription = event.target.parentNode.parentNode.querySelector('.job-description').innerText;
 
         const jobInfo = {
@@ -176,16 +179,20 @@ mainContainer.addEventListener("click", function (event) {
 
     } else if (event.target.classList.contains("rejected-btn")) {
 
+        const parentDivRejected = event.target.parentNode.parentNode.parentNode;
         const jobId = Number(event.target.parentNode.parentNode.parentNode.getAttribute("data-id"));
         // console.log(jobId);
         const companyName = event.target.parentNode.parentNode.querySelector('.company-name').innerText;
         const positionName = event.target.parentNode.parentNode.querySelector('.position-name').innerText;
         const jobTypeAndSalary = event.target.parentNode.parentNode.querySelector('.type-salary').innerText;
-        let jobStatusElement = event.target.parentNode.parentNode.querySelector('.application-status')
-        jobStatusElement.innerText = "REJECTED"
-        if(jobStatusElement.innerText = "REJECTED"){
-            jobStatusElement.classList.remove("bg-[#EEF4FF]", "text-blue-950");
-            jobStatusElement.classList.add("text-red-600", "border-red-600", "border", "font-bold");
+        let jobStatusElementRejected = event.target.parentNode.parentNode.querySelector('.application-status')
+        jobStatusElementRejected.innerText = "REJECTED"
+        if(jobStatusElementRejected.innerText = "REJECTED"){
+            jobStatusElementRejected.classList.remove("bg-[#EEF4FF]", "text-blue-950");
+            jobStatusElementRejected.classList.remove("text-green-600", "border-green-600", "border", "font-bold");
+            jobStatusElementRejected.classList.remove("border-l-5", "border-green-600");
+            jobStatusElementRejected.classList.add("text-red-600", "border-red-600", "border", "font-bold");
+            parentDivRejected.classList.add("border-l-5", "border-red-600");
         }
         
         const jobDescription = event.target.parentNode.parentNode.querySelector('.job-description').innerText;
