@@ -15,6 +15,7 @@ const mainContainer = document.querySelector("main");
 const availableJobs = document.getElementById("available-jobs");
 const noJobAvailableSection = document.getElementById("no-job-available");
 const availableJobsCount = document.getElementById("available-jobs");
+const availableJobsP = document.getElementById("available-jobs-p");
 const filterJobsP = document.getElementById("available-jobs-filter-p");
 const filterAvailableJobsCount = document.getElementById("available-jobs-filter");
 const jobsInFilter = document.getElementById("jobs-in-filter");
@@ -64,35 +65,35 @@ function toggler(id) {
         allJobCards.classList.remove("hidden");
         noJobAvailableSection.classList.add("hidden");
         filteredSection.classList.add("hidden");
-        availableJobsCount.classList.remove("hidden");
+        availableJobsP.classList.remove("hidden");
         filterJobsP.classList.add("hidden");
         calculateCount()
     } else if (id == "all-filter-btn" && (interViewList.length > 0 || rejectedList.length > 0)) {
         allJobCards.classList.remove("hidden");
         filteredSection.classList.add("hidden");
         noJobAvailableSection.classList.add("hidden");
-        availableJobsCount.classList.remove("hidden");
+        availableJobsP.classList.remove("hidden");
         filterJobsP.classList.add("hidden");
     } 
     else if (id == "interview-filter-btn" && interViewList.length > 0) {
         noJobAvailableSection.classList.add("hidden");
         allJobCards.classList.add("hidden");
         filteredSection.classList.remove("hidden");
-        availableJobsCount.classList.add("hidden");
+        availableJobsP.classList.add("hidden");
         filterJobsP.classList.remove("hidden");
         updateInterviewDataUI()
     } else if (id == "rejected-filter-btn" && rejectedList.length > 0) {
         noJobAvailableSection.classList.add("hidden");
         allJobCards.classList.add("hidden");
         filteredSection.classList.remove("hidden");
-        availableJobsCount.classList.add("hidden");
+        availableJobsP.classList.add("hidden");
         filterJobsP.classList.remove("hidden");
         updateRejectedDataUI()
     } else if ((id == "interview-filter-btn" && interViewList.length == 0) || (id == "rejected-filter-btn" && rejectedList.length == 0)) {
         noJobAvailableSection.classList.remove("hidden");
         allJobCards.classList.add("hidden");
         filteredSection.classList.add("hidden");
-        availableJobsCount.classList.add("hidden");
+        availableJobsP.classList.add("hidden");
         filterJobsP.classList.remove("hidden");
     }
     // console.log("Toggler Running");
