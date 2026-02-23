@@ -23,7 +23,7 @@
         <div class="title">
             <h1 class="text-blue-950 text-3xl font-bold mb-3">Job Application Tracker</h1>
         </div>
-        <div class="header-cards grid grid-cols-3 gap-4 ">
+        <div class="header-cards grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ">
             <div class="total-count-card px-5 py-5 bg-white rounded-md border-l-4 border-blue-950">
                 <p>Total</p>
                 <p id="total-count" class="text-blue-950 font-bold text-2xl">0</p>
@@ -51,9 +51,9 @@
             </div>
             <div class="all-toggler-btn flex gap-2">
                 <button onclick="toggler('all-filter-btn')" id="all-filter-btn"
-                    class="px-10 py-2 bg-blue-600 text-white rounded-md">All</button>
+                    class="px-2 py-1 sm:px-4 sm:py-2 lg:px-10 lg:py-2 bg-blue-600 text-white rounded-md">All</button>
                 <button onclick="toggler('interview-filter-btn')" id="interview-filter-btn"
-                    class="px-3 py-2 bg-white text-gray-700 rounded-md">Interview</button>
+                    class="px-2 py-1 sm:px-3 sm:py-2 bg-white text-gray-700 rounded-md">Interview</button>
                 <button onclick="toggler('rejected-filter-btn')" id="rejected-filter-btn"
                     class="px-3 py-2 bg-white text-gray-700 rounded-md">Rejected</button>
             </div>
@@ -62,8 +62,8 @@
 
         </section>
         <section id="all-job-cards" class="all-job-cards space-y-4">
-            <div class="job-card flex justify-between bg-white rounded-xl p-6" data-id="1">
-                <div class="div-left space-y-5 w-[70%]">
+            <div class="job-card flex justify-between bg-white rounded-xl p-4 gap-1 sm:gap-2 sm:p-6 lg:gap-3" data-id="1">
+                <div class="div-left space-y-5 w-[95%] sm:w-[85%] lg:w-[70%]">
                     <div class="company-and-position">
                         <h4 class="text-blue-950 text-xl font-bold company-name">CloudWave Technologies</h4>
                         <p class="text-[#64748B] position-name">Senior Frontend Engineer</p>
@@ -81,7 +81,7 @@
                             monitor real-time analytics. Collaborate with backend teams to optimize API performance and
                             improve UI accessibility.</p>
                     </div>
-                    <div class="action-btns flex gap-5">
+                    <div class="action-btns flex flex-col justify-center gap-2 sm:flex-row sm:justify-start lg:gap-5">
                         <button
                             class="text-green-600 px-3 py-2 border-green-600 border rounded-md font-bold interview-btn">INTERVIEW</button>
                         <button
@@ -94,8 +94,8 @@
                             class="fa-regular fa-trash-can delete-btn"></i></button>
                 </div>
             </div>
-            <div class="job-card flex justify-between bg-white rounded-xl p-6" data-id="2">
-                <div class="div-left space-y-5 w-[70%]">
+            <div class="job-card flex justify-between bg-white rounded-xl p-4 gap-1 sm:gap-2 sm:p-6 lg:gap-3" data-id="2">
+                <div class="div-left space-y-5 w-[95%] sm:w-[85%] lg:w-[70%]">
                     <div class="company-and-position">
                         <h4 class="text-blue-950 text-xl font-bold company-name">FinEdge Solutions</h4>
                         <p class="text-[#64748B] position-name">Backend Developer (Node.js)</p>
@@ -113,7 +113,7 @@
                             systems. Implement authentication, optimize database queries, and ensure high availability
                             architecture.</p>
                     </div>
-                    <div class="action-btns flex gap-5">
+                    <div class="action-btns flex flex-col justify-center gap-2 sm:flex lg:gap-5">
                         <button
                             class="text-green-600 px-3 py-2 border-green-600 border rounded-md font-bold interview-btn">INTERVIEW</button>
                         <button
@@ -126,8 +126,8 @@
                             class="fa-regular fa-trash-can delete-btn"></i></button>
                 </div>
             </div>
-            <div class="job-card flex justify-between bg-white rounded-xl p-6" data-id="3">
-                <div class="div-left space-y-5 w-[70%]">
+            <div class="job-card flex justify-between bg-white rounded-xl p-4 gap-1 sm:gap-2 sm:p-6 lg:gap-3" data-id="3">
+                <div class="div-left space-y-5 w-[95%] sm:w-[85%] lg:w-[70%]">
                     <div class="company-and-position">
                         <h4 class="text-blue-950 text-xl font-bold company-name">HealthBridge Systems</h4>
                         <p class="text-[#64748B] position-name">Full Stack Developer</p>
@@ -145,7 +145,7 @@
                             patient dashboards, integrate third-party health APIs, and maintain secure medical data
                             compliance.</p>
                     </div>
-                    <div class="action-btns flex gap-5">
+                    <div class="action-btns flex flex-col justify-center gap-2 sm:flex lg:gap-5">
                         <button
                             class="text-green-600 px-3 py-2 border-green-600 border rounded-md font-bold interview-btn">INTERVIEW</button>
                         <button
@@ -158,8 +158,8 @@
                             class="fa-regular fa-trash-can delete-btn"></i></button>
                 </div>
             </div>
-            <div class="job-card flex justify-between bg-white rounded-xl p-6" data-id="4">
-                <div class="div-left space-y-5 w-[70%]">
+            <div class="job-card flex justify-between bg-white rounded-xl p-4 gap-1 sm:gap-2 sm:p-6 lg:gap-3" data-id="4">
+                <div class="div-left space-y-5 w-[95%] sm:w-[85%] lg:w-[70%]">
                     <div class="company-and-position">
                         <h4 class="text-blue-950 text-xl font-bold company-name">DataNest AI</h4>
                         <p class="text-[#64748B] position-name">Machine Learning Engineer</p>
@@ -176,7 +176,7 @@
                             classification.
                             Improve model accuracy and deploy ML pipelines using cloud-based infrastructure.</p>
                     </div>
-                    <div class="action-btns flex gap-5">
+                    <div class="action-btns flex flex-col justify-center gap-2 sm:flex lg:gap-5">
                         <button
                             class="text-green-600 px-3 py-2 border-green-600 border rounded-md font-bold interview-btn">INTERVIEW</button>
                         <button
@@ -189,8 +189,8 @@
                             class="fa-regular fa-trash-can delete-btn"></i></button>
                 </div>
             </div>
-            <div class="job-card flex justify-between bg-white rounded-xl p-6" data-id="5">
-                <div class="div-left space-y-5 w-[70%]">
+            <div class="job-card flex justify-between bg-white rounded-xl p-4 gap-1 sm:gap-2 sm:p-6 lg:gap-3" data-id="5">
+                <div class="div-left space-y-5 w-[95%] sm:w-[85%] lg:w-[70%]">
                     <div class="company-and-position">
                         <h4 class="text-blue-950 text-xl font-bold company-name">BrightCommerce Ltd</h4>
                         <p class="text-[#64748B] position-name">React Native Developer</p>
@@ -208,7 +208,7 @@
                             Implement payment gateway integrations and optimize app performance for iOS and Android
                             devices.</p>
                     </div>
-                    <div class="action-btns flex gap-5">
+                    <div class="action-btns flex flex-col justify-center gap-2 sm:flex lg:gap-5">
                         <button
                             class="text-green-600 px-3 py-2 border-green-600 border rounded-md font-bold interview-btn">INTERVIEW</button>
                         <button
@@ -221,8 +221,8 @@
                             class="fa-regular fa-trash-can delete-btn"></i></button>
                 </div>
             </div>
-            <div class="job-card flex justify-between bg-white rounded-xl p-6" data-id="6">
-                <div class="div-left space-y-5 w-[70%]">
+            <div class="job-card flex justify-between bg-white rounded-xl p-4 gap-1 sm:gap-2 sm:p-6 lg:gap-3" data-id="6">
+                <div class="div-left space-y-5 w-[95%] sm:w-[85%] lg:w-[70%]">
                     <div class="company-and-position">
                         <h4 class="text-blue-950 text-xl font-bold company-name">SecureNet Cybersecurity</h4>
                         <p class="text-[#64748B] position-name">DevOps Engineer</p>
@@ -240,7 +240,7 @@
                             Docker and Kubernetes. Monitor system security and implement scalable cloud deployment
                             strategies.</p>
                     </div>
-                    <div class="action-btns flex gap-5">
+                    <div class="action-btns flex flex-col justify-center gap-2 sm:flex lg:gap-5">
                         <button
                             class="text-green-600 px-3 py-2 border-green-600 border rounded-md font-bold interview-btn">INTERVIEW</button>
                         <button
@@ -253,8 +253,8 @@
                             class="fa-regular fa-trash-can delete-btn"></i></button>
                 </div>
             </div>
-            <div class="job-card flex justify-between bg-white rounded-xl p-6" data-id="7">
-                <div class="div-left space-y-5 w-[70%]">
+            <div class="job-card flex justify-between bg-white rounded-xl p-4 gap-1 sm:gap-2 sm:p-6 lg:gap-3" data-id="7">
+                <div class="div-left space-y-5 w-[95%] sm:w-[85%] lg:w-[70%]">
                     <div class="company-and-position">
                         <h4 class="text-blue-950 text-xl font-bold company-name">EduSpark Technologies</h4>
                         <p class="text-[#64748B] position-name">UI/UX Designer</p>
@@ -272,7 +272,7 @@
                             and instructors. Conduct usability testing and improve user journey flows based on research
                             insights.</p>
                     </div>
-                    <div class="action-btns flex gap-5">
+                    <div class="action-btns flex flex-col justify-center gap-2 sm:flex lg:gap-5">
                         <button
                             class="text-green-600 px-3 py-2 border-green-600 border rounded-md font-bold interview-btn">INTERVIEW</button>
                         <button
@@ -285,8 +285,8 @@
                             class="fa-regular fa-trash-can delete-btn"></i></button>
                 </div>
             </div>
-            <div class="job-card flex justify-between bg-white rounded-xl p-6" data-id="8">
-                <div class="div-left space-y-5 w-[70%]">
+            <div class="job-card flex justify-between bg-white rounded-xl p-4 gap-1 sm:gap-2 sm:p-6 lg:gap-3" data-id="8">
+                <div class="div-left space-y-5 w-[95%] sm:w-[85%] lg:w-[70%]">
                     <div class="company-and-position">
                         <h4 class="text-blue-950 text-xl font-bold company-name">GreenGrid Energy</h4>
                         <p class="text-[#64748B] position-name">Software Engineer (Python)</p>
@@ -304,7 +304,7 @@
                             analytics. Build predictive models to improve smart grid efficiency and sustainability
                             tracking.</p>
                     </div>
-                    <div class="action-btns flex gap-5">
+                    <div class="action-btns flex flex-col justify-center gap-2 sm:flex lg:gap-5">
                         <button
                             class="text-green-600 px-3 py-2 border-green-600 border rounded-md font-bold interview-btn">INTERVIEW</button>
                         <button

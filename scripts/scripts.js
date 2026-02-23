@@ -271,8 +271,8 @@ function renderInterView() {
         let filterNewDiv = document.createElement("div");
         // filterNewDiv.className = "flex justify-between bg-white rounded-xl p-6"
         filterNewDiv.innerHTML = `
-        <div class="job-card flex justify-between bg-white rounded-xl p-6" data-id="${interview.jobId}">
-	        <div class="div-left space-y-5 w-[70%]">
+        <div class="job-card flex justify-between bg-white rounded-xl p-4 gap-1 sm:gap-2 sm:p-6 lg:gap-3" data-id="${interview.jobId}">
+	        <div class="div-left space-y-5 w-[95%] sm:w-[85%] lg:w-[70%]">
                         <div class="company-and-position">
                             <h4 class="text-blue-950 text-xl font-bold company-name">${interview.companyName}</h4>
                             <p class="text-[#64748B] position-name">${interview.positionName}</p>
@@ -286,7 +286,7 @@ function renderInterView() {
                         <div class="job-desc">
                             <p class="text-gray-900 job-description">${interview.jobDescription}.</p>
                         </div>
-                        <div class="action-btns flex gap-5">
+                        <div class="action-btns flex flex-col justify-center gap-2 sm:flex-row sm:justify-start lg:gap-5">
                             <button
                                 class="text-green-600 px-3 py-2 border-green-600 border rounded-md font-bold interview-btn">INTERVIEW</button>
                             <button
@@ -311,8 +311,8 @@ function renderRejected() {
         let filterNewDiv = document.createElement("div");
         // filterNewDiv.className = "flex justify-between bg-white rounded-xl p-6"
         filterNewDiv.innerHTML = `
-        <div class="job-card flex justify-between bg-white rounded-xl p-6" data-id="${rejected.jobId}">
-            <div class="div-left space-y-5 w-[70%]">
+        <div class="job-card flex justify-between bg-white rounded-xl p-4 gap-1 sm:gap-2 sm:p-6 lg:gap-3" data-id="${rejected.jobId}">
+            <div class="div-left space-y-5 w-[95%] sm:w-[85%] lg:w-[70%]">
                         <div class="company-and-position">
                             <h4 class="text-blue-950 text-xl font-bold company-name">${rejected.companyName}</h4>
                             <p class="text-[#64748B] position-name">${rejected.positionName}</p>
@@ -326,7 +326,7 @@ function renderRejected() {
                         <div class="job-desc">
                             <p class="text-gray-900 job-description">${rejected.jobDescription}.</p>
                         </div>
-                        <div class="action-btns flex gap-5">
+                        <div class="action-btns flex flex-col justify-center gap-2 sm:flex-row sm:justify-start lg:gap-5">
                             <button
                                 class="text-green-600 px-3 py-2 border-green-600 border rounded-md font-bold interview-btn">INTERVIEW</button>
                             <button
