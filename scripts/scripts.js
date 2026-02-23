@@ -52,7 +52,8 @@ calculateCount()
 
 function toggler(id) {
    
-    // let newCurrentActiveBtn = currentActiveBtn = id;
+    currentActiveBtn = id;
+    // console.log(currentActiveBtn);
 
     allTogglerBtn.classList.add('bg-white', 'text-gray-700');
     InterViewTogglerBtn.classList.add('bg-white', 'text-gray-700');
@@ -118,7 +119,7 @@ function toggler(id) {
     }
 }
 
-
+// console.log(currentActiveBtn);
 
 
 mainContainer.addEventListener("click", function (event) {
@@ -238,7 +239,7 @@ mainContainer.addEventListener("click", function (event) {
         
         
         // console.log(totalJobList[2]);
-        // console.log(currentActiveBtn);
+        console.log(currentActiveBtn);
         if(currentActiveBtn == "all-filter-btn"){
             // totalJobList = totalJobList.filter(item => item !== targetJobId);
             // console.log(targetJobId);
@@ -271,7 +272,7 @@ function renderInterView() {
         let filterNewDiv = document.createElement("div");
         // filterNewDiv.className = "flex justify-between bg-white rounded-xl p-6"
         filterNewDiv.innerHTML = `
-        <div class="job-card flex justify-between bg-white rounded-xl p-4 gap-1 sm:gap-2 sm:p-6 lg:gap-3" data-id="${interview.jobId}">
+        <div class="job-card border-l-5 border-green-600 mb-4 flex justify-between bg-white rounded-xl p-4 gap-1 sm:gap-2 sm:p-6 lg:gap-3" data-id="${interview.jobId}">
 	        <div class="div-left space-y-5 w-[95%] sm:w-[85%] lg:w-[70%]">
                         <div class="company-and-position">
                             <h4 class="text-blue-950 text-xl font-bold company-name">${interview.companyName}</h4>
@@ -311,7 +312,7 @@ function renderRejected() {
         let filterNewDiv = document.createElement("div");
         // filterNewDiv.className = "flex justify-between bg-white rounded-xl p-6"
         filterNewDiv.innerHTML = `
-        <div class="job-card flex justify-between bg-white rounded-xl p-4 gap-1 sm:gap-2 sm:p-6 lg:gap-3" data-id="${rejected.jobId}">
+        <div class="job-card border-l-5 border-red-600 mb-4 flex justify-between bg-white rounded-xl p-4 gap-1 sm:gap-2 sm:p-6 lg:gap-3" data-id="${rejected.jobId}">
             <div class="div-left space-y-5 w-[95%] sm:w-[85%] lg:w-[70%]">
                         <div class="company-and-position">
                             <h4 class="text-blue-950 text-xl font-bold company-name">${rejected.companyName}</h4>
