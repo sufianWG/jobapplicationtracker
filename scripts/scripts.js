@@ -26,7 +26,7 @@ const jobsInFilter = document.getElementById("jobs-in-filter");
 // console.log( "Toggler All btn:", allTogglerBtn.innerText, "|", "InterView Toggler Btn:", InterViewTogglerBtn.innerText, "|", "Rejected Toggler Btn:", rejectedTogglerBtn.innerText)
 // console.log( "All Job Card Data:", allJobCards.innerText, "|", "Filter Section Data:", filteredSection.innerText, "|", "Main Container Data:", mainContainer.innerText)
 
-let totalCountList = [];
+let totalJobList = [];
 let interViewList = [];
 let rejectedList = [];
 let currentActiveBtn = "all-filter-btn";
@@ -34,8 +34,8 @@ let currentActiveBtn = "all-filter-btn";
 // console.log(allJobCards.children.length) ;
 
 function calculateCount() {
-    totalCountElement.innerText = allJobCards.children.length;
-    availableJobs.innerText = allJobCards.children.length
+    totalCountElement.innerText = totalJobList.length;
+    availableJobs.innerText = totalJobList.length;
     interViewElement.innerText = interViewList.length;
     rejectedElement.innerText = rejectedList.length;
 }
@@ -209,10 +209,32 @@ mainContainer.addEventListener("click", function (event) {
         calculateCount()
         rejectedList = rejectedList.filter(item => item.jobId !== targetJobId);
         calculateCount()
+        
+        // calculateCount()
+        // console.log(totalJobList[2]);
+        console.log(currentActiveBtn);
+        if(currentActiveBtn == "all-filter-btn"){
+            // totalJobList = totalJobList.filter(item => item !== targetJobId);
+            // console.log(targetJobId);
+            totalJobList = totalJobList.filter(item => item !== targetJobId);
+
+            calculateCount()
+            jobCard.remove()
+            // console.log("yes, current activate id is true as I expected");
+        }
         // console.log(interViewList)
         // console.log(interViewList.jobId);
         
     }
+})
+
+document.addEventListener("DOMContentLoaded", function(){
+    const allCards = document.querySelectorAll(".job-card");
+    allCards.forEach(card => {
+        const cardId = Number(card.getAttribute("data-id"));
+        totalJobList.push(cardId);
+    });
+    calculateCount()
 })
 
 function renderInterView() {
