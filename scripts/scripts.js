@@ -16,9 +16,13 @@ const availableJobs = document.getElementById("available-jobs");
 const noJobAvailableSection = document.getElementById("no-job-available");
 const availableJobsCount = document.getElementById("available-jobs");
 const availableJobsP = document.getElementById("available-jobs-p");
-const filterJobsP = document.getElementById("available-jobs-filter-p");
-const filterAvailableJobsCount = document.getElementById("available-jobs-filter");
-const jobsInFilter = document.getElementById("jobs-in-filter");
+const filterJobsPinterview = document.getElementById("available-jobs-filter-interview-p");
+const filterJobsPrejected = document.getElementById("available-jobs-filter-p-rejected"); 
+const filterAvailableJobsCountInterview = document.getElementById("available-jobs-filter-interview"); 
+const filterAvailableJobsCountRejected = document.getElementById("available-jobs-filter-rejected"); 
+const jobsAvailableof1 = document.getElementById("jobs-avaialble-of1");
+const jobsAvailableof2 = document.getElementById("jobs-avaialble-of2");
+
 
 
 // console.log(noJobAvailableSection);
@@ -36,14 +40,18 @@ let currentActiveBtn = "all-filter-btn";
 function calculateCount() {
     totalCountElement.innerText = totalJobList.length;
     availableJobs.innerText = totalJobList.length;
+    jobsAvailableof1.innerText = totalJobList.length;
+    jobsAvailableof2.innerText = totalJobList.length;
     interViewElement.innerText = interViewList.length;
     rejectedElement.innerText = rejectedList.length;
+    filterAvailableJobsCountInterview.innerText = interViewList.length;
+    filterAvailableJobsCountRejected.innerText = rejectedList.length;
+
 }
 calculateCount()
 
 function toggler(id) {
-    // currentID = id;
-    // console.log(currentID);
+   
     // let newCurrentActiveBtn = currentActiveBtn = id;
 
     allTogglerBtn.classList.add('bg-white', 'text-gray-700');
@@ -66,40 +74,51 @@ function toggler(id) {
         noJobAvailableSection.classList.add("hidden");
         filteredSection.classList.add("hidden");
         availableJobsP.classList.remove("hidden");
-        filterJobsP.classList.add("hidden");
+        filterJobsPinterview.classList.add("hidden");
+        filterJobsPrejected.classList.add("hidden");
         calculateCount()
     } else if (id == "all-filter-btn" && (interViewList.length > 0 || rejectedList.length > 0)) {
         allJobCards.classList.remove("hidden");
         filteredSection.classList.add("hidden");
         noJobAvailableSection.classList.add("hidden");
         availableJobsP.classList.remove("hidden");
-        filterJobsP.classList.add("hidden");
+        filterJobsPinterview.classList.add("hidden");
+        filterJobsPrejected.classList.add("hidden");
     } 
     else if (id == "interview-filter-btn" && interViewList.length > 0) {
         noJobAvailableSection.classList.add("hidden");
         allJobCards.classList.add("hidden");
         filteredSection.classList.remove("hidden");
         availableJobsP.classList.add("hidden");
-        filterJobsP.classList.remove("hidden");
+        filterJobsPinterview.classList.remove("hidden");
+        filterJobsPrejected.classList.add("hidden");
         updateInterviewDataUI()
     } else if (id == "rejected-filter-btn" && rejectedList.length > 0) {
         noJobAvailableSection.classList.add("hidden");
         allJobCards.classList.add("hidden");
         filteredSection.classList.remove("hidden");
         availableJobsP.classList.add("hidden");
-        filterJobsP.classList.remove("hidden");
+        filterJobsPinterview.classList.add("hidden");
+        filterJobsPrejected.classList.remove("hidden");
         updateRejectedDataUI()
-    } else if ((id == "interview-filter-btn" && interViewList.length == 0) || (id == "rejected-filter-btn" && rejectedList.length == 0)) {
+    } else if (id == "interview-filter-btn" && interViewList.length == 0) {
         noJobAvailableSection.classList.remove("hidden");
         allJobCards.classList.add("hidden");
         filteredSection.classList.add("hidden");
         availableJobsP.classList.add("hidden");
-        filterJobsP.classList.remove("hidden");
+        filterJobsPinterview.classList.remove("hidden");
+        filterJobsPrejected.classList.add("hidden");
+    }else if(id == "rejected-filter-btn" && rejectedList.length == 0){
+        noJobAvailableSection.classList.remove("hidden");
+        allJobCards.classList.add("hidden");
+        filteredSection.classList.add("hidden");
+        availableJobsP.classList.add("hidden");
+        filterJobsPinterview.classList.add("hidden");
+        filterJobsPrejected.classList.remove("hidden");
     }
-    // console.log("Toggler Running");
-    return currentActiveBtn;
 }
-// console.log(currentActiveBtn);
+
+
 
 
 mainContainer.addEventListener("click", function (event) {
@@ -210,16 +229,16 @@ mainContainer.addEventListener("click", function (event) {
         rejectedList = rejectedList.filter(item => item.jobId !== targetJobId);
         calculateCount()
         
-        // calculateCount()
+        
         // console.log(totalJobList[2]);
-        console.log(currentActiveBtn);
+        // console.log(currentActiveBtn);
         if(currentActiveBtn == "all-filter-btn"){
             // totalJobList = totalJobList.filter(item => item !== targetJobId);
             // console.log(targetJobId);
             totalJobList = totalJobList.filter(item => item !== targetJobId);
 
             calculateCount()
-            jobCard.remove()
+            jobCard.classList.add("hidden");
             // console.log("yes, current activate id is true as I expected");
         }
         // console.log(interViewList)
