@@ -168,7 +168,9 @@ mainContainer.addEventListener("click", function (event) {
 
         rejectedList = rejectedList.filter(rejected => rejected.jobId != jobInfo.jobId);
         // console.log("AFter filter:", interViewList);
-        
+        if(currentActiveBtn == "rejected-filter-btn"){
+            renderRejected()
+        }
         // renderInterView()
         calculateCount()
         // if (currentActiveBtn == "interview-filter-btn") {
@@ -216,7 +218,10 @@ mainContainer.addEventListener("click", function (event) {
         // console.log(rejectedList[0].companyName);
 
         interViewList = interViewList.filter(interview => interview.jobId != jobInfo.jobId);
-
+        
+        if(currentActiveBtn == "interview-filter-btn"){
+            renderInterView()
+        }
         // renderRejected()
         // console.log(currentActiveBtn);
         // updateRejectedDataUI()
